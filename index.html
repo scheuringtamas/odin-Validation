@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form novalidate>
+      <fieldset>
+        <label for="email"
+          >Enter Your Email:
+          <input id="email" name="email" type="email" required />
+          <span class="error" aria-live="polite"></span
+        ></label>
+        <label for="country"
+          >Enter Your Country:
+          <input id="country" name="country" type="text" required />
+          <span class="error" aria-live="polite"></span>
+        </label>
+        <label for="zipCode"
+          >Enter Your Zip Code:
+          <input
+            id="zipCode"
+            name="zipCode"
+            type="text"
+            minlength="4"
+            required
+          />
+          <span class="error" aria-live="polite"></span>
+        </label>
+        <label for="password"
+          >Create a Password:
+          <input
+            id="password"
+            name="password"
+            type="password"
+            pattern="[a-z0-5]{8,}"
+            required
+          />
+          <span class="error" aria-live="polite"></span>
+        </label>
+        <label for="passwordConfirmation"
+          >Password Confirmation:
+          <input
+            id="passwordConfirmation"
+            name="passwordConfirmation"
+            type="password"
+            pattern="[a-z0-5]{8,}"
+            required
+          />
+          <span class="error" aria-live="polite"></span>
+        </label>
+      </fieldset>
+      <button>Submit</button>
+    </form>
+    <script src="main.js"></script>
+  </body>
+</html>
